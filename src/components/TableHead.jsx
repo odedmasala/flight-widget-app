@@ -3,13 +3,13 @@ import React from 'react'
 const TableHead = () => {
   return (
     <thead>
-    <tr>
+    <tr >
         <th></th>
-        <th id="time">TIME</th>
-        <th id="destination">DESTINATION</th>
-        <th id="flight">FLIGHT</th>
-        <th id="gate">GATE</th>
-        <th id="remarks">REMARKS</th>
+        <th className={"w[160px]"}>TIME</th>
+        <th className={"w-[700px]"}>DESTINATION</th>
+        <th className={"w-[230px]"} >FLIGHT</th>
+        <th className={"w-[200px]"}>GATE</th>
+        <th className={"w-[260px]"}>REMARKS</th>
     </tr>
     </thead>
   )

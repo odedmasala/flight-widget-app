@@ -1,24 +1,20 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { TableRow } from "./index";
 import axios from "axios";
 const TableBody = () => {
-  const [flights, setFlights] = useState(null);
+  const [flights, setFlights] = useState(null)
 
-  const getFlights = async () => {
-try{
-  const { data } = await axios.get("http://localhost:8000/flights");
- const dis = Object.values(data.data)
-  setFlights(dis);
-}catch(e){
-  // console.log(e);
-}
-  };
+  const getFlights = () => {
+      fetch('http://localhost:8000/flights')
+          .then(response => response.json())
+          .then(flights => setFlights(Object.values(flights.data)))
+          .catch(err => console.log(err))
+  }
 
-  useEffect(() => {
-    getFlights();
-  }, []);
+  useEffect(() => getFlights(), [])
 
-  console.log(flights);
+  // console.log(flights)
   return (
     <tbody>
       {flights?.map((flight, _index) => (

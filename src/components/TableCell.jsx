@@ -1,9 +1,10 @@
+import React from 'react'
 import {TableLetter} from './index'
 
 const TableCell = ({ word }) => {
-// console.log(word);
+// console.log(Array.from(word));
     return (
-        <td>
+        <td className={"p-4"}>
             {Array.from(word).map((letter, index) => (
                 <TableLetter key={index} letter={letter} index={index}/>
             ))}

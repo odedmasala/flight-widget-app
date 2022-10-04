@@ -1,12 +1,12 @@
-import React from 'react'
-import {TableHead,TableBody} from "./index"
+import React from "react";
+import { TableHead, TableBody } from "./index";
 const Table = () => {
   return (
-    <table>
-      <TableHead/>
-      <TableBody/>
+    <table className={"bg-zinc-900 text-left"}>
+      <TableHead />
+      <TableBody />
     </table>
-  )
-}
+  );
+};
 
-export default Table
+export default Table;
